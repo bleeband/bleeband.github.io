@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAD - TP 1</title>
+    <link rel="icon" type="image/png" href="../images/MAD_logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script type="module" src="../js/form.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="../images/MAD_logo.png" alt="Logo">
+                    <span>MAD mobile application development</span>
+                </div>
+
+                <ul class="navliens">
+                    <li><a href="../../index.html"><i class="fa fa-home"></i>Accueil</a></li>
+                    <li><a href="portfolio.html"><i class="fa fa-image"></i>PortFolio</a></li>
+                    <li><a href="loisirs.html"><i class="fa fa-calendar"></i>Horaire</a></li>
+                    <li><a href="contact.html" class="active"><i class="fa fa-phone"></i>Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+     <main>
+        <h1 class="h1contour">Contactez-moi</h1>
+
+        <section>
+            <h2 class="h2contour">Formulaire de Contact</h2>
+            <p>
+                N'hésitez pas à me contacter pour toute question, collaboration ou simplement pour échanger 
+                sur nos passions communes en programmation ou autres sujets. Je réponds généralement dans les 48 heures.
+            </p>
+
+            <form action="../../serveur/traitement.php" method="post" id="form_contact">
+                <fieldset>
+                    <legend>Informations Personnelles</legend>
+
+                    <label for="nom">Nom complet *</label>
+                    <input type="text" id="nom" name="nom" placeholder="Prénom Nom" required>
+
+                    <label for="email">Adresse courriel *</label>
+                    <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+
+                    <label for="sujet">Sujet de votre message</label>
+                    <select id="sujet" name="sujet" required>
+                        <option value="">Choisir votre sujet</option>
+                        <option value="collaboration">Proposition de collaboration</option>
+                        <option value="question">Question technique</option>
+                        <option value="emploi">Opportunité d'emploi</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Préférences de Contact</legend>
+
+                    <p>Meilleur moment pour vous contacter</p>
+
+                    <div class="radio-group">
+                        <label for="matin">
+                            <input type="radio" id="matin" name="moment" value="matin">
+                            Matin (8h-12h)
+                        </label>
+                        <label for="apres-midi">
+                            <input type="radio" id="apres-midi" name="moment" value="apres-midi">
+                            Après-midi (13h-17h)
+                        </label>
+                        <label for="soir">
+                            <input type="radio" id="soir" name="moment" value="soir">
+                            Soir (18h-21h)
+                        </label>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <label for="newsletter">
+                            <input type="checkbox" id="newsletter" name="newsletter" value="oui" checked>
+                            J'accepte de recevoir des nouvelles de vos projets
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Votre Message</legend>
+
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" placeholder="Écrivez votre message ici..." required ></textarea>
+                </fieldset>
+
+                <button type="submit">
+                    <i class="fa fa-paper-plane"></i>Envoyer le message
+                </button>
+            </form>
+
+            <!-- SIMULATION DE L'ENVOI VIA SCRIPT JS -->
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span id="fermer">&times;</span>
+                    <div id="popup-message"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <h2 class="h2contour">Autres Moyens de Contact</h2>
+            <p>
+                Vous pouvez également me retrouver sur les réseaux sociaux ou consulter mon profil GitHub 
+                pour voir mes projets open source. Je suis toujours ouvert aux discussions sur les nouvelles 
+                technologies et aux échanges avec d'autres développeurs passionnés.
+            </p>
+            <ul class="reseaux">
+                <li>
+                    <a href="https://github.com/bleeband" target="_blank">
+                        <i class="fa-brands fa-github fa-xl"></i>GitHub</a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=61577653688280" target="_blank">
+                        <i class="fa-brands fa-facebook fa-xl"></i>Facebook</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/marc-andré-dufour-5b07b73b3" target="_blank">
+                        <i class="fa-brands fa-linkedin fa-xl"></i>LinkedIn</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+
+        <pre>
+        ███╗   ███╗ █████╗ ██████╗
+        ████╗ ████║██╔══██╗██╔══██╗
+        ██╔████╔██║███████║██║  ██║
+        ██║╚██╔╝██║██╔══██║██║  ██║
+        ██║ ╚═╝ ██║██║  ██║██████╔╝
+        ╚═╝     ╚═╝╚═╝  ╚╝╚═════╝</pre>
+
+        <p>
+            H26-420-931-MA<br>
+            <i class="fa fa-copyright"></i>2026 — Réalisé par Marc-André Dufour
+        </p>
+    </footer>
+</body>
+</html>

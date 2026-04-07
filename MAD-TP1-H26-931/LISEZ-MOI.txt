@@ -1,0 +1,170 @@
+========================================== 
+  DIRECTIVES DE REMISE - PROJET 
+========================================== 
+ 
+Avant de remettre votre TP, assurez-vous de : 
+1. Ne placer AUCUN style CSS dans vos fichiers HTML. 
+2. Avoir une barre de navigation fixe sur toutes les pages. 
+3. Respecter la structure de dossiers generee. 
+4. Tester tous vos liens pour verifier qu'ils fonctionnent. 
+ 
+Pour la remise : 
+Compressez le dossier racine complet au format .zip et deposez-le sur Studium.
+
+========================================== 
+  DIRECTIVES DU PROJET 
+==========================================
+
+TRAVAIL PRATIQUE HTML/CSS – SITE COMPLET POUR UN ÉVÉNEMENT
+
+OBJECTIF
+
+Créer un site complet, stylisé et ergonomique en HTML5 et CSS3, simulant la promotion d’un
+événement fictif.
+
+Ce projet vise à mobiliser les acquis du cours tout en développant un design cohérent,
+structuré et adapté au thème choisi.
+
+Vous avez dans cet énoncé les grandes lignes directrices, l’objectif est de créer un site Web de
+grande qualité ergonomique, professionnel en utilisant tout ce que cette technologie peut nous
+offrir. Vous devez donner libre cours à votre imagination, visiter des sites Web qui font quelque
+chose de similaire pour chercher des idées.
+
+Attente : Un site Web ergonomique, de grande qualité visuelle et fonctionnelle. C’est une
+grande partie de l’évaluation de ce travail pratique.
+
+Je suis le client et donc disponible à répondre à vos questions sur les besoins de l’application,
+votre choix ergonomique, etc.
+
+En Annexe vous avez quelques images possibles de ce type de projet. Évidement ce n’est pas
+à reproduire, vous devez créer votre propre « design » original.
+
+FONCTIONNALITÉS CLÉS ATTENDUES
+  • Site statique multipages
+  • Mise en page cohérente, navigation fluide et identique partout
+  • Design harmonisé avec le thème
+  • Intégration de contenus multimédia (image, audio, vidéo)
+  • Formulaire complet et fonctionnel (validations…)
+  • Utilisation de composants modernes : Google Fonts, icônes Material Icons, etc.
+
+
+1. ARCHITECTURE EXIGÉE
+
+Vous devez obligatoirement respecter l'arborescence de dossiers suivante. Tout lien brisé à
+cause d'une mauvaise arborescence sera pénalisé.
+
+Avertissement majeur : Absolument AUCUN style ne doit se trouver dans les fichiers HTML (ni
+balise <style>, ni attribut style=""). Tout l'aspect visuel doit être contrôlé par votre fichier
+client/css/style.css.
+
+
+2. EXIGENCES TECHNIQUES GLOBALES (POUR TOUTES LES PAGES)
+
+• Barre de navigation (<nav>) : Fixée en haut de l'écran. Elle doit permettre de naviguer
+entre les 4 pages du site.
+
+• Pied de page (<footer>) : Fixé en bas de l'écran, contenant vos noms, l'année et le sigle
+du cours.
+
+• Intégration d'icônes : Vous devez intégrer la bibliothèque FontAwesome (via lien CDN
+dans le <head>) et utiliser au moins une icône pertinente pour chaque lien de votre
+menu de navigation, ainsi que dans votre pied de page.
+
+• Sémantique : Tout le contenu spécifique à chaque page doit être contenu dans une
+balise <main>.
+
+• Stylisation obligatoire des titres (<h1>, <h2>) : Vous devez démontrer votre maîtrise du
+CSS sur vos titres en utilisant obligatoirement une combinaison de ces propriétés :
+
+  o Couleurs (color, background-color)
+  o Bordures (border, border-radius)
+  o Ombrages (text-shadow pour le texte, box-shadow pour la boîte)
+  o Espacement (padding)
+
+
+3. CONTENU OBLIGATOIRE PAR PAGE
+
+
+PAGE D'ACCUEIL (INDEX.HTML - À LA RACINE)
+
+• Un titre principal <h1> centré.
+• Au moins 3 sections (<section>) distinctes de présentation (ex: Parcours,
+Compétences, Objectifs). Chaque section doit contenir au moins un paragraphe de 5
+lignes.
+
+• Image flottante : Au moins une image intégrée dans le texte avec la propriété CSS float
+(le texte doit l'habiller).
+
+• Citation : Utilisation de la balise <blockquote> stylisée pour une citation.
+
+
+PAGE LOISIRS / HORAIRES (CLIENT/PAGES/LOISIRS.HTML)
+
+• Un tableau HTML complexe (minimum 4 colonnes par 5 lignes) représentant un horaire
+ou une liste d'activités.
+
+• Sémantique du tableau : Utilisation obligatoire des balises <caption>, <thead>, <tbody>
+et <tfoot>.
+
+• Fusions : Au moins deux fusions de colonnes (colspan) et deux fusions de lignes
+(rowspan).
+
+• CSS du tableau : Alternance de couleurs (effet zébré sur les lignes) et changement
+visuel au survol de la souris (:hover) sur une ligne (changement de fond ou de bordure).
+
+
+PAGE PORTFOLIO / GALERIE (CLIENT/PAGES/PORTFOLIO.HTML)
+
+• Une galerie visuelle présentant au moins 6 réalisations, projets ou photos.
+
+• Mise en page : Les images doivent être disposées sous forme de grille en utilisant
+impérativement CSS Grid ou Flexbox (l'utilisation de tableaux pour la mise en page est
+interdite).
+
+• Sémantique : Chaque image doit être contenue dans une balise <figure> accompagnée
+de sa description textuelle dans une balise <figcaption>.
+
+• Effets : Un effet de transition CSS (zoom, changement d'opacité, ou soulèvement avec
+ombre) au survol de chaque carte/photo.
+
+
+PAGE CONTACT (CLIENT/PAGES/CONTACT.HTML)
+
+• Un formulaire de contact structuré. L'attribut action de la balise <form> doit pointer
+correctement vers le fichier serveur/traitement.php en utilisant les bons chemins
+relatifs (../../).
+
+• Groupement : Utilisation de <fieldset> et <legend> pour regrouper visuellement les
+sections du formulaire.
+
+• Champs obligatoires (tous doivent avoir les attributs id et name, et être liés à un <label>) :
+  o Champs texte et courriel (type="text", type="email").
+  o Un menu déroulant (<select> avec au moins 3 <option>).
+  o Des boutons radio (au moins 2 options).
+  o Une case à cocher (<input type="checkbox">).
+  o Une zone de texte (<textarea>).
+  o Un bouton de soumission stylisé.
+
+
+4. EXIGENCES CSS
+
+• Fichier CSS unique (style.css)
+• Navigation en haut de toutes les pages. Balise <nav>
+• :hover stylé sur :
+  o Liens
+  o Boutons
+  o Images
+• border-radius, box-shadow et padding pour adoucir le design
+• Design cohérent avec le thème choisi
+  o Ex : un site sur la musique ne doit pas ressembler à un site médical
+• Polices personnalisées
+• Icônes trouvés via internet
+
+5. ERGONOMIE (TRÈS IMPORTANT)
+
+Le site doit être :
+  • Facile à lire : taille des polices, marges, interlignes
+  • Clair : structure visuelle avec sections bien identifiées
+  • Navigable rapidement : menu visible, boutons clairs
+  • Accessible : labels associés aux champs, images avec alt
+L’ergonomie et la cohérence graphique comptent pour une part importante de la note.
